@@ -1,0 +1,149 @@
+/* imageStyles.css */
+
+/* Group 184 */
+.group-184 {
+    position: absolute;
+    width: 109.88px;
+    height: 66.71px;
+    left: 105.26px;
+    top: 31.23px;
+  }
+  
+  /* Group 181 */
+  .group-181 {
+    position: absolute;
+    width: 109.88px;
+    height: 66.71px;
+    left: 105.26px;
+    top: 31.23px;
+  }
+  
+  /* Rectangle 222 */
+  .rectangle-222 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 102.91px;
+    height: 61.05px;
+    left: 112.24px;
+    top: 31.23px;
+    background: rgba(244, 244, 244, 0.71);
+    border: 1.74418px solid #584DE2;
+    border-radius: 8.72091px;
+  }
+  
+  /* Rectangle 221 */
+  .rectangle-221 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 103.34px;
+    height: 60.17px;
+    left: 107.45px;
+    top: 35.59px;
+    background: rgba(244, 244, 244, 0.8);
+    border: 1.74418px solid #584DE2;
+    border-radius: 7.84881px;
+  }
+  
+  /* Rectangle 220 */
+  .rectangle-220 {
+    position: absolute;
+    width: 101.16px;
+    height: 57.99px;
+    left: 105.26px;
+    top: 39.95px;
+    background: #584DE2;
+    border-radius: 6.10463px;
+  }
+  
+  /* Group 182 */
+  .group-182 {
+    position: absolute;
+    width: 73.18px;
+    height: 61.4px;
+    left: 114.42px;
+    top: 36.46px;
+  }
+  
+  /* P */
+  .p {
+    position: absolute;
+    width: 20.73px;
+    height: 53.94px;
+    left: 168.29px;
+    top: 91.87px;
+    font-family: 'Fredoka SemiCondensed';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44.5459px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    border: 3.48836px solid #FFFFFF;
+    transform: rotate(173.84deg);
+  }
+  
+  /* e */
+  .e {
+    position: absolute;
+    width: 21.8px;
+    height: 56.72px;
+    left: 114.42px;
+    top: 39.58px;
+    font-family: 'Fredoka SemiCondensed';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 46.842px;
+    line-height: 57px;
+    display: flex;
+    align-items: center;
+    border: 3.48836px solid #FFFFFF;
+    transform: rotate(-8.21deg);
+  }
+  
+  /* Rectangle 268 */
+  .rectangle-268 {
+    position: absolute;
+    width: 2.62px;
+    height: 6.1px;
+    left: 152.35px;
+    top: 66.12px;
+    background: #FFFFFF;
+  }
+  
+  /* Group 183 */
+  .group-183 {
+    position: absolute;
+    width: 23.8px;
+    height: 51.37px;
+    left: 163.8px;
+    top: 46.49px;
+  }
+  
+  /* P2 */
+  .p2 {
+    position: absolute;
+    width: 19.13px;
+    height: 49.77px;
+    left: 163.8px;
+    top: 48.32px;
+    font-family: 'Fredoka SemiCondensed';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44.5459px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    border: 3.48836px solid #FFFFFF;
+    transform: rotate(-5.48deg);
+  }
+  
+  /* Rectangle 269 */
+  .rectangle-269 {
+    position: absolute;
+    width: 3.92px;
+    height: 6.1px;
+    left: 175.89px;
+    top: 65.68px;
+    background: #FFFFFF;
+  }
+  
