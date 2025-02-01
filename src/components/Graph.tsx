@@ -33,6 +33,7 @@ const Graph: React.FC<GraphProps> = ({ startDate, endDate }) => {
     while (currentDate <= endDate) {
       data.push({
         date: new Date(currentDate),
+        // Only assign a value for dates up to today
         Graph:
           currentDate <= today ? Math.floor(Math.random() * 1000) + 100 : null,
       });
@@ -57,19 +58,21 @@ const Graph: React.FC<GraphProps> = ({ startDate, endDate }) => {
     ],
   };
 
+  // Updated chart options
   const chartOptions = {
     responsive: true,
+    maintainAspectRatio: false, // Allow the chart to fill its container
     plugins: {
       legend: {
         position: "top" as const,
         labels: {
-          color: "#FFFFFF", // Change legend text color
+          color: "#FFFFFF", // Legend text color
         },
       },
       title: {
         display: true,
         text: `Active Users Progress (${startDate.toDateString()} - ${endDate.toDateString()})`,
-        color: "#FFFFFF", // Change title text color
+        color: "#FFFFFF", // Title text color
       },
     },
     scales: {
@@ -77,40 +80,40 @@ const Graph: React.FC<GraphProps> = ({ startDate, endDate }) => {
         title: {
           display: true,
           text: "Date",
-          color: "#FFFFFF", // Change X-axis title color
+          color: "#FFFFFF", // X-axis title color
         },
         ticks: {
-          color: "#FFFFFF", // Change X-axis ticks color
+          color: "#FFFFFF", // X-axis ticks color
+          autoSkip: true, // Let Chart.js automatically skip labels if necessary
         },
-        // Fixed range for the X-axis to avoid layout shift
-        min: 0,
-        max: GraphData.length - 1, // Keep X-axis fixed based on the number of data points
-        stepSize: 1, // Ensure the X-axis ticks are evenly spaced
+        // Removed min, max, and stepSize as they are not effective for category scales
       },
       y: {
         title: {
           display: true,
           text: "Active Users",
-          color: "#FFFFFF", // Change Y-axis title color
+          color: "#FFFFFF", // Y-axis title color
         },
         ticks: {
-          color: "#FFFFFF", // Change Y-axis ticks color
-          beginAtZero: true, // Keep Y-axis starting at 0
-          stepSize: 200, // Set a fixed step size (e.g., every 200 active users)
+          color: "#FFFFFF", // Y-axis ticks color
+          beginAtZero: true,
+          stepSize: 200, // Fixed step size on the y-axis
         },
-        // Fixed Y-axis range to prevent it from adjusting dynamically
         min: 0,
-        max: 1200, // Fixed max value, can adjust as needed
+        max: 1200, // Fixed max value on the y-axis
       },
     },
   };
 
   return (
-    <div className="mt-2 w-full ">
+    <div className="mt-2 w-full">
       <h1 className="text-lg font-bold mb-4 text-white">
         Active Users Progress
       </h1>
-      <Bar data={chartData} options={chartOptions} height={200} />
+      {/* Remove the 'height' prop and let the container control the size */}
+      <div style={{ height: "100%" }}>
+        <Bar data={chartData} options={chartOptions} />
+      </div>
     </div>
   );
 };

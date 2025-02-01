@@ -5,7 +5,7 @@ import Graph from "./components/Graph";
 import DatePicker from "./components/DatePicker";
 import ClassProgress from "./components/ClassProgress";
 import TopScoredLearners from "./components/TopScoredLearners";
-import Chart from "./components/chart";
+import Chart from "./components/Chart";
 import {
   FaBook,
   FaBookOpen,
@@ -28,7 +28,7 @@ const Dashboard: React.FC = () => {
     <div className="min-h-screen bg-indigo-900">
       <div className="flex flex-col p-4 md:flex-row">
         {/* Sidebar */}
-        <div className="w:full md:w-[320px] min-h-screen p-4  border-4 rounded-2xl border-[#584DE2] bg-white">
+        <div className="w-full md:w-[320px] min-h-screen p-4 border-4 rounded-2xl border-[#584DE2] bg-white">
           <img
             src="https://i.imgur.com/06DCzDw.png"
             className="w-[109px] h-[80px] max-w-[290px] mx-auto rounded-2xl p-4 mt-[7px]"
@@ -59,17 +59,18 @@ const Dashboard: React.FC = () => {
                   { name: "Cours", icon: "📘" },
                   { name: "Statistiques", icon: "📊" },
                 ]}
-                onItemClick={(item) => {
+                onItemClick={(item: any) => {
                   console.log(item);
                 }}
               />
             </div>
           </div>
         </div>
+
         {/* Main Content */}
-        <div className="flex-1 p-4 min-h-screen border-4 rounded-2xl border-[#584DE2] bg-white mx-4 sm:mx-6 md:mx-[25px]">
-          <div className=" flex flex-row justify-between md:mt-[45px] md:ml-[20px]">
-            <h1 className=" mt-8 text-2xl sm:text-3xl md:text-[54px] font-fredoka font-medium text-[#4C4949]">
+        <div className="flex-1 p-4 min-h-screen border-4 rounded-2xl border-[#584DE2] bg-white mx-0 sm:mx-4 md:mx-6">
+          <div className="flex flex-row justify-between mt-4 md:mt-[45px] md:ml-[20px]">
+            <h1 className="text-2xl sm:text-3xl md:text-[54px] font-fredoka font-medium text-[#4C4949]">
               Statistiques
             </h1>
             <div>
@@ -79,10 +80,10 @@ const Dashboard: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col p-6 ml-4 mt-[40px] border-[2px] rounded-2xl border-[#584DE2] min-h-screen bg-[#E8E7ED]">
+          <div className="flex flex-col p-4 sm:p-6 ml-0 sm:ml-4 mt-[40px] border-[2px] rounded-2xl border-[#584DE2] min-h-screen bg-[#E8E7ED]">
             {/* Cards */}
-            <div className="flex  justify- gap-[22px]">
-              <div className="bg-white h-[112px] w-[16.77vw] rounded-xl shadow-md border">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-[22px]">
+              <div className="bg-white h-[112px] w-full sm:w-[30%] rounded-xl shadow-md border">
                 <div className="flex h-full">
                   <div className="w-3 h-full bg-[#40E0D0] rounded-l-2xl"></div>
                   <div className="text-4xl text-[#40E0D0] p-8">
@@ -97,7 +98,7 @@ const Dashboard: React.FC = () => {
                 </div>
               </div>
 
-              <div className="bg-white h-[112px] w-[23vw]  rounded-xl shadow-md border">
+              <div className="bg-white h-[112px] w-full sm:w-[40%] rounded-xl shadow-md border">
                 <div className="flex h-full">
                   <div className="w-3 h-full bg-[#FFA500] rounded-l-2xl"></div>
                   <div className="text-4xl text-[#FFA500] p-8">
@@ -109,7 +110,7 @@ const Dashboard: React.FC = () => {
                     <div className="p-4">Eleves</div>
                     <div className="mt-1 ml-6">100</div>{" "}
                   </div>
-                  <div className=" w-[119px] h-[80px] mt-5 ml-12 bg-[#FFA500] rounded-2xl border">
+                  <div className="w-[119px] h-[80px] mt-5 ml-12 bg-[#FFA500] rounded-2xl border">
                     <div className="p-2 font-fredoka text-slate-50">
                       Activite Totale
                     </div>
@@ -117,7 +118,8 @@ const Dashboard: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-white h-[112px] w-[28.6vw] border-4 rounded-2xl border-[#584DE2] shadow-md p-4 flex flex-col items-center justify-center">
+
+              <div className="bg-white h-[112px] w-full sm:w-[30%] border-4 rounded-2xl border-[#584DE2] shadow-md p-4 flex flex-col items-center justify-center">
                 <div className="flex space-x-4 text-indigo-500">
                   {/* First section with the open book icon and number */}
                   <div className="flex items-center">
@@ -153,14 +155,14 @@ const Dashboard: React.FC = () => {
             </div>
 
             {/* Bottom divs */}
-            <div className="flex flex-col lg:flex-row gap-[22px] mt-6">
+            <div className="flex flex-col lg:flex-row gap-4 sm:gap-[22px] mt-6">
               {/* Black div (Progress Section) */}
-              <div className=" flex h-[631px] bg-white rounded-xl shadow-md border w-[16.77vw]  p-4">
+              <div className="h-[631px] bg-white rounded-xl shadow-md border w-full lg:w-[30%] p-4">
                 <ClassProgress />
               </div>
 
               {/* Grey div (Charts Section) */}
-              <div className="w-[23vw]  flex flex-col  ">
+              <div className="w-full lg:w-[40%] flex flex-col">
                 {/* Chart 1 */}
                 <div className="bg-white h-[315px] rounded-t-[6px] shadow p-4">
                   <h3 className="text-black text-lg mb-2">Chart 1</h3>
@@ -168,13 +170,14 @@ const Dashboard: React.FC = () => {
                 </div>
 
                 {/* Chart 2 */}
-                <div className="bg-[#4A4585] mt- rounded-b-[6px] h-[308px]  shadow p-4">
+                <div className="bg-[#4A4585] rounded-b-[6px] h-[308px] shadow p-4">
                   <Chart />
                 </div>
               </div>
+
               {/* Chart 3 */}
-              <div className="w-[28.6vw] flex flex-col gap-4">
-                <div className=" h-[295px] mt-3 bg-[#584DE2] rounded-lg shadow p-4">
+              <div className="w-full lg:w-[30%] flex flex-col gap-4">
+                <div className="h-[295px] mt-3 bg-[#584DE2] rounded-lg shadow p-4">
                   <Graph
                     startDate={state[0].startDate}
                     endDate={state[0].endDate}
@@ -182,7 +185,7 @@ const Dashboard: React.FC = () => {
                 </div>
 
                 {/* Chart 4 */}
-                <div className=" bg-[#5C54BD] h-[305px] rounded-lg shadow p-4">
+                <div className="bg-[#5C54BD]  rounded-lg shadow py-4 px-2">
                   <div className="">
                     <TopScoredLearners />
                   </div>
